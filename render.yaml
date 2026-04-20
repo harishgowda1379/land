@@ -2,11 +2,10 @@ services:
   # PHP Web Service
   - type: web
     name: land-registration
-    env: docker
+    env: php
     plan: free
-    runtime: docker
-    dockerfilePath: ./Dockerfile
-    dockerContext: .
+    buildCommand: "echo 'Build complete'"
+    startCommand: "php -S 0.0.0.0:$PORT"
     healthCheck:
       path: /
       initialDelaySeconds: 60
