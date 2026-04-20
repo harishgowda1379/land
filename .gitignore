@@ -1,0 +1,50 @@
+# Data files
+data.json
+*.json
+
+# Database files
+*.sql
+*.db
+*.sqlite
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# XAMPP specific
+setup_db.php
+temp_hash.ipynb
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Cache
+cache/
+tmp/
+
+# Backup files
+*.bak
+*.backup
+
+# Node modules (if any)
+node_modules/
+
+# Composer files (if any)
+vendor/
+composer.lock
+
+# Render specific
+render-debug.log
