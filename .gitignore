@@ -1,6 +1,5 @@
 # Data files
 data.json
-*.json
 
 # Database files
 *.sql
