@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - LandChain</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">LandChain</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="page dashboard-page">
+        <section class="dashboard-header card-card">
+            <h1>Welcome to LandChain</h1>
+            <p>Manage land registrations, transfers, verification, and history from one secure platform.</p>
+            <a href="login.html" class="btn btn-secondary">Login to Continue</a>
+        </section>
+
+        <section class="dashboard-grid">
+            <article class="dashboard-card">
+                <h2>Add New Land</h2>
+                <p>Register a new land parcel and create the first transaction block.</p>
+                <a href="add_land.html" class="btn btn-primary">Add Land</a>
+            </article>
+            <article class="dashboard-card">
+                <h2>Transfer Ownership</h2>
+                <p>Transfer land ownership and link the transaction to the previous hash.</p>
+                <a href="transfer.html" class="btn btn-primary">Transfer</a>
+            </article>
+            <article class="dashboard-card">
+                <h2>Land History</h2>
+                <p>View the ownership chain and transaction history for a land record.</p>
+                <a href="history.html" class="btn btn-primary">View History</a>
+            </article>
+            <article class="dashboard-card">
+                <h2>Land Verification</h2>
+                <p>Verify the current owner and detect if the hash chain remains valid.</p>
+                <a href="verify.html" class="btn btn-primary">Verify Land</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Blockchain-Based Land Registration System &copy; 2026</p>
+    </footer>
+</body>
+</html>

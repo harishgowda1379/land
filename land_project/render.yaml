@@ -1,0 +1,57 @@
+services:
+  # PHP Web Service
+  - type: web
+    name: land-registration
+    env: php
+    plan: free
+    buildCommand: "echo 'Build complete'"
+    startCommand: "php -S 0.0.0.0:$PORT"
+    healthCheck:
+      path: /
+      initialDelaySeconds: 60
+      periodSeconds: 10
+      timeoutSeconds: 5
+      failureThreshold: 3
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DB_HOST
+        fromDatabase:
+          name: land-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: land-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: land-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: land-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: land-db
+          property: password
+
+  # PostgreSQL Database
+  - type: pserv
+    name: land-db
+    env: docker
+    plan: free
+    runtime: image
+    image:
+      url: postgres:15
+    healthCheck:
+      path: /
+      initialDelaySeconds: 30
+      periodSeconds: 10
+    envVars:
+      - key: POSTGRES_DB
+        value: land_chain
+      - key: POSTGRES_USER
+        value: postgres
+      - key: POSTGRES_PASSWORD
+        generateValue: true

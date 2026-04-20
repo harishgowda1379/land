@@ -1,0 +1,10 @@
+.git
+**/.git
+.venv
+.qodo
+.zencoder
+.zenflow
+**/node_modules
+**/vendor
+render-debug.log
+
