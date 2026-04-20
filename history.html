@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Land History - LandChain</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">LandChain</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="page form-page">
+        <section class="form-card">
+            <h1>Land History</h1>
+            <p>Enter the land ID to view the full ownership transaction chain.</p>
+            <form id="historyForm" action="history.php" method="post">
+                <label for="land_id">Land ID</label>
+                <input type="number" id="land_id" name="land_id" placeholder="Land ID" required />
+
+                <button type="submit" class="btn btn-primary">View History</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Blockchain-Based Land Registration System &copy; 2026</p>
+    </footer>
+</body>
+</html>

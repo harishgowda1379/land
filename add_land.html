@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Land - LandChain</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">LandChain</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="page form-page">
+        <section class="form-card">
+            <h1>Add Land Record</h1>
+            <p>Register a new land parcel and automatically create the first blockchain transaction block.</p>
+            <form id="landForm" action="add_land.php" method="post">
+                <label for="owner_name">Owner Name</label>
+                <input type="text" id="owner_name" name="owner_name" placeholder="Owner Name" required />
+
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Land Location" required />
+
+                <label for="survey_number">Survey Number</label>
+                <input type="text" id="survey_number" name="survey_number" placeholder="Unique Survey Number" required />
+
+                <label for="area">Area (in sq. ft.)</label>
+                <input type="text" id="area" name="area" placeholder="Area" required />
+
+                <button type="submit" class="btn btn-primary">Register Land</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Blockchain-Based Land Registration System &copy; 2026</p>
+    </footer>
+</body>
+</html>

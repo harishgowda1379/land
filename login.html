@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - LandChain</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">LandChain</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="login.html" class="active">Login</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="page form-page">
+        <section class="form-card">
+            <h1>Login to Your Account</h1>
+            <p>Use your registered email and password.</p>
+            <form id="loginForm" action="login.php" method="post">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <p class="small-text">Don't have an account? <a href="register.html">Register here</a>.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Blockchain-Based Land Registration System &copy; 2026</p>
+    </footer>
+</body>
+</html>
